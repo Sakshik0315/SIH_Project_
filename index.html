@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni-Student Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Technical Education Department, Rajasthan</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#mentorship">Mentorship</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="#registration">Registration</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Connecting Students and Alumni</h2>
+            <p>Build your network, gain mentorship, and access valuable resources for your career growth.</p>
+            <a href="#features" class="btn">Explore Features</a>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Our Features</h2>
+            <ul>
+                <li>Alumni Directory</li>
+                <li>Mentorship Programs</li>
+                <li>Job Postings and Referrals</li>
+                <li>Notes and Study Materials</li>
+                <li>Video Lectures</li>
+                <li>Discussion Forums</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="mentorship" class="mentorship">
+        <div class="container">
+            <h2>Find a Mentor</h2>
+            <p>Connect with alumni mentors for career guidance and technical advice.</p>
+            <button onclick="openMentorshipForm()">Request a Mentor</button>
+        </div>
+    </section>
+
+    <section id="resources" class="resources">
+        <div class="container">
+            <h2>Resources</h2>
+            <div class="notes">
+                <h3>Notes and Study Materials</h3>
+                <ul id="notesList">
+                    <!-- Dynamic notes will be added here -->
+                </ul>
+            </div>
+            <div class="lectures">
+                <h3>Video Lectures</h3>
+                <ul id="lecturesList">
+                    <!-- Dynamic lectures will be added here -->
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="registration" class="registration">
+        <div class="container">
+            <h2>Student Registration</h2>
+            <form action="#" method="POST">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="rollnumber">Roll Number:</label>
+                <input type="text" id="rollnumber" name="rollnumber" placeholder="Enter your roll number" required>
+
+                <label for="course">Course:</label>
+                <select id="course" name="course" required>
+                    <option value="">Select your course</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Mechanical Engineering">Mechanical Engineering</option>
+                    <option value="Civil Engineering">Civil Engineering</option>
+                    <option value="Electrical Engineering">Electrical Engineering</option>
+                    <option value="Electronics and Communication">Electronics and Communication</option>
+                    <option value="Information Technology">Information Technology</option>
+                </select>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
+        
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Email: support@rajasthan-tech.edu</p>
+            <p>Phone: +91-1234567890</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Technical Education Department, Rajasthan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
