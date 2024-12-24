@@ -3,118 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alumni Connect Portal</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-        }
-        header {
-            background-color: #0078d7;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #005a9e;
-        }
-        nav a {
-            color: white;
-            padding: 15px 20px;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-        nav a:hover {
-            background-color: #003a6d;
-        }
-        .container {
-            margin: 20px auto;
-            max-width: 900px;
-            background: #fff;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        .form-section {
-            margin-top: 30px;
-        }
-        .form-section label {
-            display: block;
-            margin: 10px 0 5px;
-        }
-        .form-section input, .form-section select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .form-section button {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            background-color: #0078d7;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        .form-section button:hover {
-            background-color: #005a9e;
-        }
-    </style>
+    <title>Alumni-Student Portal</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to the Alumni Connect Portal</h1>
+        <div class="container">
+            <h1>Technical Education Department, Rajasthan</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#mentorship">Mentorship</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="#registration">Registration</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-        <a href="#">Register</a>
-    </nav>
-    <div class="container">
-        <h2>Register</h2>
-        <div class="form-section">
-            <form id="studentForm">
-                <h3>Student Registration</h3>
-                <label for="studentName">Name:</label>
-                <input type="text" id="studentName" name="studentName" placeholder="Enter your name">
-                <label for="studentEmail">Email:</label>
-                <input type="email" id="studentEmail" name="studentEmail" placeholder="Enter your email">
-                <label for="studentCourse">Course:</label>
-                <select id="studentCourse" name="studentCourse">
-                    <option value="">Select Course</option>
-                    <option value="engineering">Engineering</option>
-                    <option value="business">Business</option>
-                    <option value="arts">Arts</option>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Connecting Students and Alumni</h2>
+            <p>Build your network, gain mentorship, and access valuable resources for your career growth.</p>
+            <a href="#features" class="btn">Explore Features</a>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Our Features</h2>
+            <ul>
+                <li>Alumni Directory</li>
+                <li>Mentorship Programs</li>
+                <li>Job Postings and Referrals</li>
+                <li>Notes and Study Materials</li>
+                <li>Video Lectures</li>
+                <li>Discussion Forums</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="mentorship" class="mentorship">
+        <div class="container">
+            <h2>Find a Mentor</h2>
+            <p>Connect with alumni mentors for career guidance and technical advice.</p>
+            <button onclick="openMentorshipForm()">Request a Mentor</button>
+        </div>
+    </section>
+
+    <section id="resources" class="resources">
+        <div class="container">
+            <h2>Resources</h2>
+            <div class="notes">
+                <h3>Notes and Study Materials</h3>
+                <ul id="notesList">
+                    <li><a href="COA_Notes -UNIT 1.rtf" download>Computer Architecture & Organization - UNIT 1</a></li>
+                </ul>
+            </div>
+            <div class="lectures">
+                <h3>Video Lectures</h3>
+                <ul id="lecturesList">
+                    <!-- Dynamic lectures will be added here -->
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="registration" class="registration">
+        <div class="container">
+            <h2>Student Registration</h2>
+            <form action="#" method="POST">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="rollnumber">Roll Number:</label>
+                <input type="text" id="rollnumber" name="rollnumber" placeholder="Enter your roll number" required>
+
+                <label for="course">Course:</label>
+                <select id="course" name="course" required>
+                    <option value="">Select your course</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Mechanical Engineering">Mechanical Engineering</option>
+                    <option value="Civil Engineering">Civil Engineering</option>
+                    <option value="Electrical Engineering">Electrical Engineering</option>
+                    <option value="Electronics and Communication">Electronics and Communication</option>
+                    <option value="Information Technology">Information Technology</option>
                 </select>
-                <button type="submit">Register as Student</button>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
+
+                <button type="submit">Register</button>
+            </form>
+            
+            <h2>Alumni Registration</h2>
+            <form action="#" method="POST">
+                <label for="alumni-name">Full Name:</label>
+                <input type="text" id="alumni-name" name="alumni-name" placeholder="Enter your full name" required>
+
+                <label for="alumni-email">Email:</label>
+                <input type="email" id="alumni-email" name="alumni-email" placeholder="Enter your email" required>
+
+                <label for="graduation-year">Graduation Year:</label>
+                <input type="text" id="graduation-year" name="graduation-year" placeholder="Enter your graduation year" required>
+
+                <label for="industry">Industry:</label>
+                <input type="text" id="industry" name="industry" placeholder="Enter your industry" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="alumni-password" name="password" placeholder="Create a password" required>
+
+                <button type="submit">Register</button>
             </form>
         </div>
-        <div class="form-section">
-            <form id="alumniForm">
-                <h3>Alumni Registration</h3>
-                <label for="alumniName">Name:</label>
-                <input type="text" id="alumniName" name="alumniName" placeholder="Enter your name">
-                <label for="alumniEmail">Email:</label>
-                <input type="email" id="alumniEmail" name="alumniEmail" placeholder="Enter your email">
-                <label for="alumniGraduationYear">Graduation Year:</label>
-                <input type="number" id="alumniGraduationYear" name="alumniGraduationYear" placeholder="Enter your graduation year">
-                <button type="submit">Register as Alumni</button>
-            </form>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Email: support@rajasthan-tech.edu</p>
+            <p>Phone: +91-1234567890</p>
         </div>
-    </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Technical Education Department, Rajasthan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
